@@ -1,5 +1,9 @@
 import Layout from '../../components/layout'
 import { getAllPostIds, getPostData } from '../../lib/posts';
+import Head from 'next/head';
+import Date from '../../components/date';
+import asdstyles from '../../styles/utils.module.css';
+import { useStyleRegistry } from 'styled-jsx';
 
 export async function getStaticProps({params}){
     const postData = await getPostData(params.id);
@@ -19,11 +23,12 @@ export async function getStaticPaths(){
 export default function Post({postData}){
     return (
         <Layout>
-            {postData.title}
-            <br />
-            {postData.id}
-            <br />
-            {postData.date}
+            <Head>
+                <h1 className={asdstyles.headingX1}>{postData.title}</h1>
+            </Head>
+            <div className={asdstyles.lightText}>
+                <Date dateString={postData.date}/>
+            </div>
             <div dangerouslySetInnerHTML={{__html: postData.contentHtml}}/>
         </Layout>
     );
