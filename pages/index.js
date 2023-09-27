@@ -4,6 +4,9 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
+import ProjectCard from '../components/projectCard';
+import ProjectCardStyles from '../styles/projectCard.module.css'
+import { Button } from 'react-scroll';
 
 export async function getStaticProps(){
   const allPostsData = getSortedPostsData();
@@ -21,6 +24,20 @@ export default function Home({allPostsData}) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
+        <div className={utilStyles.whitespace100per}></div>
+        <div className={ProjectCardStyles.projectCardContainer}>
+          <h1>Projects</h1>
+          <ProjectCard></ProjectCard>
+          <ProjectCard></ProjectCard>
+          <ProjectCard></ProjectCard>
+        </div>
+        <div>
+            <p>want to see more?</p>
+            <Link href='/work'>
+              <button>click here</button>
+            </Link>
+          </div>
+        
         <p>[Your Self Introduction]</p>
         <p>
           (This is a sample website - you’ll be building a site like this on{' '}

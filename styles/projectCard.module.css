@@ -1,0 +1,49 @@
+.imageDiv{
+    display: inline-block;
+    border: 2px grey;
+    background: grey;
+    filter: drop-shadow(0px 5px 5px black);
+    margin: 10px 10px 10px 10px;
+    border-radius: 23px;
+}
+
+.imageContainer{
+    border-radius: 23px;
+    border: none;
+}
+
+.header{
+    
+}
+
+.tags{
+    color: lightskyblue;
+}
+
+.projectCard{
+    background: grey;
+    border-radius: 26px;
+    display: inline-block;
+    width: 10vw;
+    min-width: 400px;
+    max-width: 600px;
+    min-height: 600px;
+    max-height: 800px;
+    margin: 0 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.projectCardText{
+    margin: 10px 10px 10px 10px;
+}
+
+.projectCardContainer{
+    text-align: center;
+    overflow: auto;
+}
+
+.bottomText{
+    position: absolute; 
+    bottom: 0;
+}

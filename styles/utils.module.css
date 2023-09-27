@@ -36,6 +36,26 @@
   .padding1px {
     padding-top: 1px;
   }
+
+  .padding40px{
+    padding-left: 20px;
+  }
+
+  .padding40pxbottom{
+    padding-bottom: 20px;
+  }
+
+  .marginleft20px{
+    margin-left:20px;
+  }
+
+  .marginleft1per{
+    margin-left: 1%;
+  }
+
+  .marginbottom1per{
+    margin-bottom: 1%;
+  }
   
   .list {
     list-style: none;
@@ -50,4 +70,56 @@
   .lightText {
     color: #666;
   }
+
+  .inline_block_child{
+    display: inline-block;
+  }
+
+  .topRightDiv{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+
+  .floatingDiv{
+    top:0;
+    right:0;
+    position: fixed;
+  }
+
+  .whitespace100per{
+    margin-top: 50vh;
+    background: yellow;
+  }
+
+  .alignLeft{
+    text-align: left;
+  }
+
+
+  .footerText{
+    color: white;
+    text-align: center;
+  }
+
+  .footerImageMargin{
+    margin: auto
+  }
+  
+  .center{
+    margin: auto;
+    width: 25%;
+    border: 3px solid green;
+    text-align: center;
+  }
+  
+  .centerDiv{
+    width: 50vh;
+    margin: 0 auto;
+  }
+
+  .containerMargin{
+    margin: 3rem auto 6rem;
+  }
+
   
