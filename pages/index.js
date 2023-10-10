@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
-import { getSortedPostsData } from '../lib/posts';
+import { getSortedPostsData, getProjectsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
 import ProjectCard from '../components/projectCard';
@@ -10,14 +10,17 @@ import { Button } from 'react-scroll';
 
 export async function getStaticProps(){
   const allPostsData = getSortedPostsData();
+  const allProjectsData = getProjectsData();
+  console.log(allProjectsData);
   return{
     props:{
       allPostsData,
+      allProjectsData,
     }
   }
 }
 
-export default function Home({allPostsData}) {
+export default function Home({allPostsData, allProjectsData}) {
   return (
     <Layout home>
       <Head>
@@ -27,6 +30,17 @@ export default function Home({allPostsData}) {
         <div className={utilStyles.whitespace100per}></div>
         <div className={ProjectCardStyles.projectCardContainer}>
           <h1>Projects</h1>
+          {allProjectsData.map(({id, title, date, tags}) =>(
+            <Link href={`/projects/${id}`} className={ProjectCardStyles.noStyleLink}>
+              <ProjectCard
+                id={id}
+                title={title}
+                tags={tags}
+              >
+              </ProjectCard>
+            </Link>
+          )
+          )}
           <ProjectCard></ProjectCard>
           <ProjectCard></ProjectCard>
           <ProjectCard></ProjectCard>

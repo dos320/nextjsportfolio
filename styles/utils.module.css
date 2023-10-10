@@ -115,8 +115,18 @@
   
   .centerDiv{
     width: 50vh;
-    margin: 0 auto;
+    margin: auto;
+    display: block;
+    border: 3px solid blue;
+    text-align: center;
   }
+
+  .centerDiv img{
+    margin: auto;
+    display: block;
+  }
+
+
 
   .containerMargin{
     margin: 3rem auto 6rem;

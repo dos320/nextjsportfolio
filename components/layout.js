@@ -122,13 +122,14 @@ export default function Layout({ children, home }) {
       <br></br>
       <div className={`${utilStyles.center}`}>      
         <div className={utilStyles.centerDiv}>
-          <Link href="google.com">
-            <Image 
-              src='/images/linkedin.png'
-              width={50}
-              height={50}
-            />  
-          </Link>
+            <Link href='/'>
+              <Image 
+                src='/images/linkedin.png'
+                width={50}
+                height={50}
+                className={utilStyles.centerDiv.img}
+              />
+            </Link>  
         </div>
         <p className={`${utilStyles.footerText} ${utilStyles.padding40px}`}>howard.zhang111@gmail.com</p>
       </div>

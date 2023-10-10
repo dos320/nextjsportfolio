@@ -1,8 +1,9 @@
 import utilStyles from "../styles/utils.module.css";
 import projectCardStyles from "../styles/projectCard.module.css";
 import Image from "next/image";
+import { Link } from "react-scroll";
 
-export default function ProjectCard({title, image, description, tags}){
+export default function ProjectCard({id, title, image, description, tags}){
     return(
         <div className={projectCardStyles.projectCard}>
             <div className={projectCardStyles.imageDiv}>
